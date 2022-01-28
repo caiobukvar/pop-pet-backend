@@ -1,13 +1,14 @@
 const express = require('express');
 const login = require('./controllers/login');
+const users = require('./controllers/users');
 const verifyToken = require('./helpers/verifyToken');
 
-const rotas = express();
+const routes = express();
 
 //cadastro usuário
-rotas.post('/cadastro', usuarios.cadastrarUsuario);
+routes.post('/register', users.registerUser);
 
 //Login
-rotas.post('/login', login.login);
-rotas.use(verifyToken);
+routes.post('/login', login.login);
+routes.use(verifyToken);
 
