@@ -1,4 +1,4 @@
-create table usuarios (
+create table users (
   id serial primary key,
   name text,
   username text not null unique,
