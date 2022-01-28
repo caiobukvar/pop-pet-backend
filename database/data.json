@@ -1,0 +1,72 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Smooth rubber ball",
+            "price": 169,
+            "stock": 6,
+            "category": "Toys"
+        },
+        {
+            "id": 2,
+            "name": "Clove rubber ball",
+            "price": 908,
+            "stock": 0,
+            "category": "Toys"
+        },
+        {
+            "id": 3,
+            "name": "Chewing bone",
+            "price": 999,
+            "stock": 7,
+            "category": "Toys"
+        },
+        {
+            "id": 4,
+            "name": "Dog food - Special Dog",
+            "price": 529,
+            "stock": 79,
+            "category": "Food"
+        },
+        {
+            "id": 5,
+            "name": "Collar",
+            "price": 519,
+            "stock": 1,
+            "category": "Utility"
+        },
+        {
+            "id": 6,
+            "name": "Bed for dogs",
+            "price": 3990,
+            "stock": 1,
+            "category": "Utility"
+        },
+        {
+            "id": 7,
+            "name": "Bed for cats",
+            "price": 2990,
+            "stock": 0,
+            "category": "Utility"
+        },
+        {
+            "id": 8,
+            "name": "Scratcher for cats",
+            "price": 3200,
+            "stock": 2,
+            "category": "Utility"
+        },
+        {
+            "id": 9,
+            "name": "Catnip",
+            "price": 2749,
+            "stock": 9,
+            "category": "Utility"
+        }
+    ],
+    "carrinho": {
+        "products": [],
+        "subtotal": 0,
+        "total": 0
+    }
+}
