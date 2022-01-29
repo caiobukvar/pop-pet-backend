@@ -190,5 +190,6 @@ module.exports = {
     editCart,
     deleteFromCart,
     clearCart,
-    getCart
+    getCart,
+    checkout
 }

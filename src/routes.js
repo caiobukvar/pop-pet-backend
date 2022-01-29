@@ -7,21 +7,21 @@ const cart = require('./controllers/cart');
 
 const verifyToken = require('./helpers/verifyToken');
 
-const routes = express();
+const router = express();
 
-routes.post('/register', users.registerUser);
-routes.patch('/update/user/:id', users.updateUser);
+router.post('/register', users.registerUser);
+router.patch('/update/user/:id', users.updateUser);
 
-routes.post('/login', login.login);
+router.post('/login', login.login);
 
-routes.get('/products', products.listProducts);
+router.get('/products', products.listProducts);
 
-routes.get('/cart', cart.getCart);
-routes.post('/cart/products/', cart.addToCart);
-routes.post('/cart/products/:id', cart.editCart);
-routes.delete('/cart/products/:id', cart.deleteFromCart);
-routes.delete('/cart', cart.clearCart);
-routes.post('/checkout', cart.checkout);
+router.get('/cart', cart.getCart);
+router.post('/cart/products/', cart.addToCart);
+router.post('/cart/products/:id', cart.editCart);
+router.delete('/cart/products/:id', cart.deleteFromCart);
+router.delete('/cart', cart.clearCart);
+router.post('/checkout', cart.checkout);
 
-routes.use(verifyToken);
+router.use(verifyToken);
 
