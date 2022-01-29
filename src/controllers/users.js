@@ -5,7 +5,7 @@ const { createUserSchema } = require('../validations/index');
 
 const registerUser = async (req, res) => {
     try {
-        const { name, username, cpf, email, phone, password } = req.body;
+        const { name, username, cpf, email, phone, password, address } = req.body;
         await createUserSchema.validate(req.body);
 
         const userExists = await knex('users').where({ username }).first();
@@ -17,8 +17,13 @@ const registerUser = async (req, res) => {
         const securePassword = await bcrypt.hash(password, 10);
 
         const user = await knex('users').insert({
+            name,
             username,
-            password: securePassword
+            cpf,
+            email,
+            phone,
+            password: securePassword,
+            address
         });
 
         if (!user) {
