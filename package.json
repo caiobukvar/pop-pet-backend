@@ -10,6 +10,6 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon src/index.js"
   }
 }

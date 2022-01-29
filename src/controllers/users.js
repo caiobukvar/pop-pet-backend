@@ -1,28 +1,12 @@
 const knex = require('../knexfile');
 const bcrypt = require('bcrypt');
+const { createUserSchema } = require('../validations/index');
+
 
 const registerUser = async (req, res) => {
-    const { username, password, email, confirmPassword } = req.body;
+    const { name, username, cpf, email, phone, password } = req.body;
 
-    if (!username) {
-        return res.status(404).json("Username field is required");
-    }
-
-    if (!password) {
-        return res.status(404).json("Password field is required");
-    }
-
-    if (!email) {
-        return res.status(404).json("E-mail field is required");
-    }
-
-    if (password.length < 5) {
-        return res.status(404).json("Password must contain at least 8 characters");
-    }
-
-    if (password !== confirmPassword) {
-        return res.status(404).json("Password must match!");
-    }
+    await createUserSchema.validate(req.body);
 
     try {
         const userExists = await knex('users').where({ username }).first();
