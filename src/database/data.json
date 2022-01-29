@@ -5,63 +5,72 @@
             "name": "Smooth rubber ball",
             "price": 169,
             "stock": 6,
-            "category": "Toys"
+            "category": "Toys",
+            "image": ""
         },
         {
             "id": 2,
             "name": "Clove rubber ball",
             "price": 908,
             "stock": 0,
-            "category": "Toys"
+            "category": "Toys",
+            "image": ""
         },
         {
             "id": 3,
             "name": "Chewing bone",
             "price": 999,
             "stock": 7,
-            "category": "Toys"
+            "category": "Toys",
+            "image": ""
         },
         {
             "id": 4,
             "name": "Dog food - Special Dog",
             "price": 529,
             "stock": 79,
-            "category": "Food"
+            "category": "Food",
+            "image": ""
         },
         {
             "id": 5,
             "name": "Collar",
             "price": 519,
             "stock": 1,
-            "category": "Utility"
+            "category": "Utility",
+            "image": ""
         },
         {
             "id": 6,
             "name": "Bed for dogs",
             "price": 3990,
             "stock": 1,
-            "category": "Utility"
+            "category": "Utility",
+            "image": ""
         },
         {
             "id": 7,
             "name": "Bed for cats",
             "price": 2990,
             "stock": 0,
-            "category": "Utility"
+            "category": "Utility",
+            "image": ""
         },
         {
             "id": 8,
             "name": "Scratcher for cats",
             "price": 3200,
             "stock": 2,
-            "category": "Utility"
+            "category": "Utility",
+            "image": ""
         },
         {
             "id": 9,
             "name": "Catnip",
             "price": 2749,
             "stock": 9,
-            "category": "Utility"
+            "category": "Utility",
+            "image": ""
         }
     ],
     "carrinho": {
