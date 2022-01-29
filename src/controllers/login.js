@@ -28,7 +28,7 @@ const login = async (req, res) => {
             username: user.username
         }
 
-        const token = jwt.sign(userTokenData, hashPassword, { expiresIn: '8h' });
+        const token = jwt.sign(userTokenData, process.JWT_SECRET, { expiresIn: '8h' });
 
         const { password: _, ...userData } = user;
 
