@@ -16,10 +16,12 @@ routes.post('/login', login.login);
 
 routes.get('/products', products.listProducts);
 
-routes.get('/cart',);
+routes.get('/cart', cart.getCart);
 routes.post('/cart/products/', cart.addToCart);
-routes.delete('/cart/products/:id',);
-routes.post('/checkout',);
+routes.post('/cart/products/:id', cart.editCart);
+routes.delete('/cart/products/:id', cart.deleteFromCart);
+routes.delete('/cart', cart.clearCart);
+routes.post('/checkout', cart.checkout);
 
 routes.use(verifyToken);
 

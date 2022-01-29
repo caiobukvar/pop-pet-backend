@@ -1,13 +1,17 @@
 function returnCartValue(cart) {
-    let subTotal = 0;
+    let total = 0;
 
     cart.products.forEach(prod => {
-        subTotal += prod.price * prod.amount;
+        total += prod.price * prod.amount;
     })
 
     const cartValue = {
-        subTotal
+        total
     }
 
     return cartValue;
+}
+
+module.exports = {
+    returnCartValue,
 }

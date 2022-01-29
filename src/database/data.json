@@ -75,7 +75,6 @@
     ],
     "cart": {
         "products": [],
-        "subtotal": 0,
         "total": 0
     }
 }
