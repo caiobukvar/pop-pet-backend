@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const fsp = fs.promises;
 
-const FILE_LOCATION = 'src/database/data.json'
+const FILE_LOCATION = 'src/database/data.json';
 
 async function readFile() {
     try {

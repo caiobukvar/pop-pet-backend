@@ -1,4 +1,4 @@
-const knex = require('src/conexao');
+const knex = require('src/connection');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const hashPassword = require('src/hashPassword');
