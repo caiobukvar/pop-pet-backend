@@ -1,7 +1,6 @@
 const knex = require('src/connection');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const hashPassword = require('src/hashPassword');
 
 const login = async (req, res) => {
     const { username, password } = req.body;
@@ -28,7 +27,7 @@ const login = async (req, res) => {
             username: user.username
         }
 
-        const token = jwt.sign(userTokenData, process.JWT_SECRET, { expiresIn: '8h' });
+        const token = jwt.sign(userTokenData, process.env.JWT_SECRET);
 
         const { password: _, ...userData } = user;
 
