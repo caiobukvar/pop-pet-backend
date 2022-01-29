@@ -4,11 +4,10 @@ const { createUserSchema } = require('../validations/index');
 
 
 const registerUser = async (req, res) => {
-    const { name, username, cpf, email, phone, password } = req.body;
-
-    await createUserSchema.validate(req.body);
-
     try {
+        const { name, username, cpf, email, phone, password } = req.body;
+        await createUserSchema.validate(req.body);
+
         const userExists = await knex('users').where({ username }).first();
 
         if (userExists) {
@@ -28,6 +27,7 @@ const registerUser = async (req, res) => {
 
         return res.status(200).json('User registered successfully!');
     } catch (error) {
+        console.log(error);
         return res.status(400).json(error.message);
     }
 }

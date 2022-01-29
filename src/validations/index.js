@@ -33,11 +33,7 @@ const createUserSchema = yup.object().shape({
         .string()
         .strict()
         .required(),
-    address: yup
-        .required(),
-    userName: yup
-        .string()
-        .required(),
+    address: yup.string().required(),
 });
 
 module.exports = {

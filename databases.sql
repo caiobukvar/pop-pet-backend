@@ -1,14 +1,13 @@
 create table users (
   id serial primary key,
-  name text,
+  name text not null,
   username text not null unique,
-  cpf text unique,
-  email text unique,
-  phone text,
-  genero text,
+  cpf text not null unique,
+  email text not null unique,
+  phone text not null,
   password text not null,
   confirmPassword text not null,
-  adress text,
+  adress text not null,
   );
 
 create table products (
