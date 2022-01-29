@@ -17,7 +17,7 @@ routes.post('/login', login.login);
 routes.get('/products', products.listProducts);
 
 routes.get('/cart',);
-routes.post('/cart/products/',);
+routes.post('/cart/products/', cart.addToCart);
 routes.delete('/cart/products/:id',);
 routes.post('/checkout',);
 

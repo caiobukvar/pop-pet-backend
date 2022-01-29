@@ -22,6 +22,16 @@ async function readFile() {
     }
 }
 
+async function writeFile() {
+    try {
+        await fsp.writeFile(FILE_LOCATION, JSON.stringify(data, null, 2));
+        return true;
+    } catch (err) {
+        return false;
+    }
+}
+
 module.exports = {
     readFile,
+    writeFile
 }
