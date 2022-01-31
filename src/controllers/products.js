@@ -4,7 +4,6 @@ async function listProducts(req, res) {
     const { products } = await readFile();
     const { id, name, price, stock, category, image } = req.query;
 
-
     if (!products) {
         return res.status(200).json([]);
     }

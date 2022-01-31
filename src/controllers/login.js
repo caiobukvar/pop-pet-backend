@@ -32,9 +32,10 @@ const login = async (req, res) => {
         const { password: _, ...userData } = user;
 
         return res.status(200).json({
-            usuario: userData,
+            userData,
             token
         });
+
     } catch (error) {
         return res.status(400).json(error.message);
     }
