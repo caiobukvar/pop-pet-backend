@@ -3,9 +3,10 @@ const express = require('express');
 const login = require('./controllers/login');
 const users = require('./controllers/users');
 const products = require('./controllers/products');
-const cart = require('./controllers/cart');
+// const cart = require('./controllers/cart');
 
-const verifyToken = require('./helpers/verifyToken');
+const auth = require('./helpers/verifyToken');
+// routes.xxx('/rota', auth, funcao);
 
 const router = express();
 
