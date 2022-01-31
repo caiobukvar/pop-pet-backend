@@ -1,8 +1,9 @@
-const { readFile } = require('../database/db');
+const knex = require('../knexfile');
 
 async function listProducts(req, res) {
-    const { products } = await readFile();
-    const { id, name, price, stock, category, image } = req.query;
+
+    const products = await knex('products');
+    const { id, name, price, stock, category, image, description } = req.query;
 
     if (!products) {
         return res.status(200).json([]);
