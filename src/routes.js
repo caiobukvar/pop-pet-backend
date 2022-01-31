@@ -8,21 +8,19 @@ const products = require('./controllers/products');
 const auth = require('./helpers/verifyToken');
 // routes.xxx('/rota', auth, funcao);
 
-const router = express();
+const routes = express();
 
-router.post('/register', users.registerUser);
-router.patch('/update/user/:id', users.updateUser);
+routes.post('/register', users.registerUser);
+// routes.patch('/update/user/:id', users.updateUser);
 
-router.post('/login', login.login);
+routes.post('/login', login.login);
 
-router.get('/products', products.listProducts);
+routes.get('/products', products.listProducts);
 
-router.get('/cart', cart.getCart);
-router.post('/cart/products/', cart.addToCart);
-router.post('/cart/products/:id', cart.editCart);
-router.delete('/cart/products/:id', cart.deleteFromCart);
-router.delete('/cart', cart.clearCart);
-router.post('/checkout', cart.checkout);
+// routes.get('/cart',);
+// routes.post('/cart/products/',);
+// routes.delete('/cart/products/:id',);
+// routes.post('/checkout',);
 
-router.use(verifyToken);
+module.exports = routes;
 
