@@ -16,6 +16,7 @@ routes.post('/register', users.registerUser);
 routes.post('/login', login.login);
 
 routes.get('/products', products.listProducts);
+routes.get('/products/:id', products.listProductsById);
 
 // routes.get('/cart',);
 // routes.post('/cart/products/',);

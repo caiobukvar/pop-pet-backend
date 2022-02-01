@@ -1,29 +1,34 @@
 const knex = require('../knexfile');
 
+
 async function listProducts(req, res) {
-
-    const products = await knex('products');
-    const { id, name, price, stock, category, image, description } = req.query;
-
-    if (!products) {
-        return res.status(200).json([]);
+    try {
+        const products = await knex('products');
+        return res.status(200).json(products);
+    } catch (error) {
+        return res.status(400);
     }
-
-    if (category) {
-        products = products.filter(prod =>
-            prod.category.toLowerCase() === category.toLowerCase()
-        );
-    }
-
-    if (price) {
-        products = products.filter(prod =>
-            prod.price === price
-        );
-    }
-
-    return res.status(200).json(products);
 }
+
+async function listProductsById(req, res) {
+    try {
+        const id = req.params.id;
+
+        const product = await knex('products').where({ id });
+
+        if (!product) {
+            return res.status(404).json('No product with this informed id.');
+        }
+
+        return res.status(200).json(product);
+    } catch (error) {
+        return res.status(400).json(error.message);
+    }
+}
+
+
 
 module.exports = {
     listProducts,
+    listProductsById
 }
