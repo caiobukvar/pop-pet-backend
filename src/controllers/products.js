@@ -13,8 +13,7 @@ async function listProducts(req, res) {
 async function listProductsById(req, res) {
     try {
         const id = req.params.id;
-
-        const product = await knex('products').where({ id });
+        const product = await knex('products').where({ id: Number(id) });
 
         if (!product) {
             return res.status(404).json('No product with this informed id.');
